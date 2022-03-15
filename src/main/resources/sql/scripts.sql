@@ -17,10 +17,13 @@ INSERT INTO `authorities` VALUES (NULL, 'happy', 'write');
 CREATE TABLE `customer` (
                             `id` int NOT NULL AUTO_INCREMENT,
                             `email` varchar(45) NOT NULL,
-                            `pwd` varchar(45) NOT NULL,
+                            `pwd` varchar(200) NOT NULL,
                             `role` varchar(45) NOT NULL,
                             PRIMARY KEY (`id`)
 );
 
 INSERT INTO `customer` (`email`, `pwd`, `role`)
 VALUES ('johndoe@example.com', '54321', 'admin');
+
+INSERT INTO `customer` (`email`, `pwd`, `role`)
+VALUES ('happy@example.com', '12345', 'admin');

@@ -9,11 +9,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class SecurityCustomer implements UserDetails {
+public class SecurityCustomerUserDetails implements UserDetails {
 
     private final Customer customer;
 
-    public SecurityCustomer(Customer customer) {
+    public SecurityCustomerUserDetails(Customer customer) {
         this.customer = customer;
     }
 

@@ -1,6 +1,6 @@
 package com.spring.security.and.jpa.enosis.preparation.service;
 
-import com.spring.security.and.jpa.enosis.preparation.config.SecurityCustomer;
+import com.spring.security.and.jpa.enosis.preparation.config.SecurityCustomerUserDetails;
 import com.spring.security.and.jpa.enosis.preparation.entity.Customer;
 import com.spring.security.and.jpa.enosis.preparation.repository.CustomerRepository;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -25,7 +25,7 @@ public class CustomerUserDetailsService implements UserDetailsService {
 		if (customer.size() == 0) {
 			throw new UsernameNotFoundException("User details not found for the user : " + username);
 		}
-		return new SecurityCustomer(customer.get(0));
+		return new SecurityCustomerUserDetails(customer.get(0));
 	}
 
 }

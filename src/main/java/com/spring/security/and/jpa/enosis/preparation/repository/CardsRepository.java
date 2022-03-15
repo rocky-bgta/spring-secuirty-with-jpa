@@ -1,14 +1,14 @@
 package com.spring.security.and.jpa.enosis.preparation.repository;
 
-import com.spring.security.and.jpa.enosis.preparation.entity.Customer;
+import com.spring.security.and.jpa.enosis.preparation.entity.Cards;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface CustomerRepository extends CrudRepository<Customer, Long> {
+public interface CardsRepository extends CrudRepository<Cards, Long> {
 	
-	List<Customer> findByEmail(String email);
+	List<Cards> findByCustomerId(int customerId);
 
 }
